@@ -1,0 +1,15 @@
+CUDA_VISIBLE_DEVICES='0' python main.py \
+	--seed 999 \
+        --exp_dir checkpoints \
+        --exp_name ASR_conformer_1 \
+        --data_dir /mnt/2TB/user_chengyu/Corpus/noisy-vctk-16k \
+        --num_workers 5 \
+        --cuda \
+        --log_interval 20 \
+        --batch_size 5 \
+        --learning_rate 5e-4 \
+        --num_epochs 150 \
+        --grad_accumulate_batches 1 \
+        --log_grad_norm \
+        --lr_decay 0 \
+        --resume_dir False

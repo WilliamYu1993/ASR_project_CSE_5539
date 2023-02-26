@@ -1,0 +1,15 @@
+CUDA_VISIBLE_DEVICES='1' python main_bl.py \
+	--seed 999 \
+        --exp_dir checkpoints \
+        --exp_name ASR_crnn_baseline_2_cnn_5_rnn_3 \
+        --data_dir /mnt/2TB/user_chengyu/Corpus/noisy-vctk-16k \
+        --num_workers 5 \
+        --cuda \
+        --log_interval 20 \
+        --batch_size 10 \
+        --learning_rate 5e-4 \
+        --num_epochs 100 \
+        --grad_accumulate_batches 1 \
+        --log_grad_norm \
+        --lr_decay 0 \
+        --resume_dir False
